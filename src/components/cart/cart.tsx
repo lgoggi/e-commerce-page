@@ -1,6 +1,6 @@
 import {useContext } from 'react'
 import { CartContext } from "../../providers/CartProvider"
-import {ProductBox, Product, ProductInfo, ProductThumb, ProductText, Title, Wrapper, ProductPrice, Checkout, BinButton, EmptyCart } from "./cart-styles"
+import {ProductBox, Product, ProductInfo, ProductThumb, ProductText, Title, Wrapper, ProductPrice, Checkout, BinButton, EmptyCart, ProductName } from "./cart-styles"
 import{ReactComponent as BinIcon} from "../../assets/images/icon-delete.svg"
 import { CartProps } from '../../types/types'
 
@@ -22,12 +22,12 @@ const Cart = () => {
             <>
               <ProductBox>
                 {
-                  cart?.map((prod) => {
+                  cart?.map((prod, index) => {
                     return (
-                      <Product>
+                      <Product key={index}>
                         <ProductThumb src={prod.item.images[0].img_thumb} alt={prod.item.images[0].alt} />
                         <ProductInfo>
-                          <ProductText>{prod.item.name}</ProductText>
+                          <ProductName>{prod.item.name}</ProductName>
                           <ProductText>${prod.item.price.toFixed(2)} x {prod.quant}</ProductText>
                           <ProductPrice>${(prod.item.price * prod.quant).toFixed(2)}</ProductPrice>
                         </ProductInfo>

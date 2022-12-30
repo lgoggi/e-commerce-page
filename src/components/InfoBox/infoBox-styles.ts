@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1440px){
     width: 40vw;
   }
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     width: 90vw;
   }
 `
@@ -16,7 +16,7 @@ export const Brand = styled.div`
   font-size: 1.5rem;
   font-weight: 700;
   margin: 3rem 0 1.5rem;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     width: 90vw;
   }
 `
@@ -29,7 +29,7 @@ export const Name = styled.div`
   @media screen and (max-width: 1440px){
     width: 40vw;
   }
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     width: 90vw;
   }
 `
@@ -43,7 +43,7 @@ export const Description = styled.div`
   @media screen and (max-width: 1440px){
     width: 40vw;
   }
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     width: 90vw;
   }
 `
@@ -54,7 +54,7 @@ export const PriceRow = styled.div`
   flex-wrap: wrap;
   margin-bottom: 1rem;
   width: 15rem;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     width: 90vw;
   }
 `
@@ -69,7 +69,7 @@ export const OldPrice=styled.div`
   font-weight: 400;
   width: 50rem;
   text-decoration-line: line-through;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     margin: 0 0 0 auto;
     width: fit-content;
   }
@@ -88,7 +88,7 @@ export const BuyingRow = styled.div`
   display:flex;
   flex-direction: row;
   margin: 2.5rem 0 1rem;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     margin: 2.5rem 0 1rem 0;
     flex-direction: column;
   }
@@ -104,7 +104,7 @@ export const QuantBox = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 12rem;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     height: 6rem;
     width: 90vw;
   }
@@ -130,7 +130,7 @@ export const BuyButton = styled.button`
   justify-content: center;
   margin-left: 2.5rem;
   width: 20rem;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     margin: 2rem 0;
     height: 6rem;
     width: 90vw;

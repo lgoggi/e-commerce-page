@@ -9,7 +9,7 @@ export const ThumbRow=styled.div`
   @media screen and (max-width: 1440px){
     width: 45vw;
   } 
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     display: none;
   } 
 `

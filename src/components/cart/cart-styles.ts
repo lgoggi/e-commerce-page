@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
   overflow-x:hidden;
   overflow-y: auto;
   width: 30rem;
-  z-index: 2;
-  @media screen and (max-width: 1000px) {
+  z-index: 3;
+  @media screen and (max-width: 720px) {
     height: 35rem;
     right: 9vw;
     top: 12vh;
-    width: 70vw;
+    width: 85vw;
   }
 `
 export const Title = styled.div`
@@ -61,13 +61,13 @@ export const Product = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  height: 5rem;
+  height: fit-content;
   margin: 0 1.5rem 1rem; 
   width: 90%;
 `
 export const ProductThumb = styled.img`
   border-radius: 6px;
-  height: 100%;
+  height: 5rem;
 `
 export const ProductInfo = styled.div`
   align-items: center;
@@ -77,17 +77,33 @@ export const ProductInfo = styled.div`
   flex-wrap: wrap;
   margin-left: 10px;
 `
+export const ProductName = styled.div`
+  color: #606060;
+  font-size: 1.4rem;
+  font-weight: 400;
+  width: 100%;
+  @media screen and (max-width: 720px) {
+    font-size: 1.2rem;
+  }
+`
 export const ProductText = styled.div`
   color: #606060;
   font-size: 1.3rem;
   font-weight: 400;
   width: fit-content;
+  @media screen and (max-width: 720px) {
+    font-size: 1rem;
+  }
 `
 export const ProductPrice = styled.div`
   color: #252525;
   font-size: 1.5rem;
   font-weight: 700;
   margin-left: 10px;
+  width: fit-content;
+  @media screen and (max-width: 720px) {
+    font-size: 1rem;
+  }
 `
 export const BinButton = styled.button`
   background-color: transparent;
@@ -105,4 +121,7 @@ export const Checkout = styled.button`
   height: 8rem;
   margin: 1.2rem auto;
   width: 22rem;
+    @media screen and (max-width: 720px) {
+    width: 50vw;
+  }
 `

@@ -60,7 +60,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1440px){
     width: 90vw;
   }
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 720px){
     flex-direction: column;
     margin: 0;
     width: 100vw;
@@ -98,15 +98,15 @@ function App() {
       <Header 
         displayCart={displayCart} setDisplayCart={setDisplayCart} 
         displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
-        
       <Wrapper>
+        
       {displayCart && <Cart/>}
         <Carousel images={shoes.images} 
           setDisplayPhotos={setDisplayPhotos} 
           setDisplayCart={setDisplayCart}
           mainImgIndex={mainImgIndex} setMainImgIndex={setMainImgIndex} 
           handleNavButton={handleNavButton}/>
-        <InfoBox product={shoes}/>
+        <InfoBox product={shoes} setDisplayCart={setDisplayCart}/>
       </Wrapper>
     </>
   );

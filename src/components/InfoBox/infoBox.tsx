@@ -7,10 +7,11 @@ import { Brand, BuyButton, BuyingRow, Description, Discount, Name, OldPrice, Pri
 import { CartContext } from "../../providers/CartProvider";
 
 type Props ={ 
-  product: ProductType
+  product: ProductType,
+  setDisplayCart: React.Dispatch<React.SetStateAction<Boolean>>,
 }
 
-const InfoBox = ({product}: Props) => {
+const InfoBox = ({product, setDisplayCart}: Props) => {
   const [quant, setQuant] = useState(1);
   const { cart, setCart } = useContext(CartContext);
   const newPrice = (product.price * (1 - parseFloat(`0.${product.discount}`))).toFixed(2);
@@ -28,6 +29,7 @@ const InfoBox = ({product}: Props) => {
       let newCart = [ {item: product, quant: quant} ]
       setCart(newCart)
     }
+    setDisplayCart(true)
   }
   
 
