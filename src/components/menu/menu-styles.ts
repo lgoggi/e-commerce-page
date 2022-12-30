@@ -5,14 +5,15 @@ export const Wrapper = styled.div`
   height: 100vh;
   position: absolute;
   width: 100vw;
-  z-index: 1;
+  z-index: 99;
+  overflow: hidden;
 `
 export const SideBar = styled.div`
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 90vh;
+  height: 95vh;
   padding: 5vh 0 0 5vh;
   width: 55vw;
 `

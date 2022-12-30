@@ -5,7 +5,7 @@ import Header from "./components/header/header";
 import InfoBox from "./components/InfoBox/infoBox";
 import PhotosModal from "./components/PhotosModal/photosModal";
 import Cart from "./components/cart/cart";
-import { ProductType } from "./types/types";
+import { imagesType, ProductType } from "./types/types";
 
 import img1 from "./assets/images/image-product-1.jpg"
 import img1_thumb from "./assets/images/image-product-1-thumbnail.jpg"
@@ -71,15 +71,41 @@ function App() {
   const [displayCart, setDisplayCart] = useState<Boolean>(false)
   const [displayPhotos, setDisplayPhotos] = useState<Boolean>(false)
   const [displayMenu, setDisplayMenu] = useState<Boolean>(false)
+  const [mainImgIndex, setMainImgIndex] = useState(0)
+
+  const handleNavButton = (index: number, images: imagesType[])=>{
+    if((mainImgIndex+index)<0) {
+      setMainImgIndex(images.length-1)
+      return
+    }
+    if ((mainImgIndex+index)>(images.length-1)) {
+      setMainImgIndex(0)
+      return
+    }
+    setMainImgIndex(mainImgIndex+index)
+  }
   
   return (
     <>
       {displayMenu && <Menu setDisplayMenu={setDisplayMenu}/>}
-      {displayPhotos && <PhotosModal images={shoes.images}  setDisplayPhotos={setDisplayPhotos}/>}
-      <Header displayCart={displayCart} setDisplayCart={setDisplayCart} displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
+
+      {displayPhotos && 
+      <PhotosModal images={shoes.images}  
+        setDisplayPhotos={setDisplayPhotos} 
+        mainImgIndex={mainImgIndex} setMainImgIndex={setMainImgIndex} 
+        handleNavButton={handleNavButton}/>}
+
+      <Header 
+        displayCart={displayCart} setDisplayCart={setDisplayCart} 
+        displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
+        
       <Wrapper>
       {displayCart && <Cart/>}
-        <Carousel images={shoes.images} setDisplayPhotos={setDisplayPhotos} setDisplayCart={setDisplayCart}/>
+        <Carousel images={shoes.images} 
+          setDisplayPhotos={setDisplayPhotos} 
+          setDisplayCart={setDisplayCart}
+          mainImgIndex={mainImgIndex} setMainImgIndex={setMainImgIndex} 
+          handleNavButton={handleNavButton}/>
         <InfoBox product={shoes}/>
       </Wrapper>
     </>

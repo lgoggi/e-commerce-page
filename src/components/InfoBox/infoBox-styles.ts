@@ -75,7 +75,6 @@ export const OldPrice=styled.div`
   }
 `
 export const Discount = styled.div`
-border: 1px solid green;
   background-color: hsl(25, 100%, 88%);
   border-radius: 12%;
   color: hsl(26, 100%, 55%);

@@ -13,6 +13,13 @@ export const Wrapper = styled.div`
   overflow-x:hidden;
   overflow-y: auto;
   width: 30rem;
+  z-index: 2;
+  @media screen and (max-width: 1000px) {
+    height: 35rem;
+    right: 9vw;
+    top: 12vh;
+    width: 70vw;
+  }
 `
 export const Title = styled.div`
   border-bottom: 1px solid grey;
@@ -42,13 +49,13 @@ export const ProductBox = styled.div`
   }
 `
 export const EmptyCart = styled.div`
-align-items: center;
-color: #606060;
-display: flex;
-justify-content: center;
-font-size: 1.3rem;
-font-weight: 700;
-height: 50%;
+  align-items: center;
+  color: #606060;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 50%;
 `
 export const Product = styled.div`
   align-items: center;
@@ -83,19 +90,19 @@ export const ProductPrice = styled.div`
   margin-left: 10px;
 `
 export const BinButton = styled.button`
-background-color: transparent;
-border: none;
-cursor: pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 `
 export const Checkout = styled.button`
-background-color: hsl(26, 100%, 55%);
-border: none;
-border-radius: 12px;
-color: white;
-cursor: pointer;
-font-size: 1.5rem;
-font-weight: 700;
-height: 8rem;
-margin: 1.2rem auto;
-width: 22rem;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 8rem;
+  margin: 1.2rem auto;
+  width: 22rem;
 `

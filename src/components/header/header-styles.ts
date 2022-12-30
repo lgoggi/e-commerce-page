@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`  @media screen and (max-width: 1280px){
-    width: 40vw;
-  } 
+export const Wrapper = styled.div`  
   align-items: center;
   border-bottom: 1px solid grey;
   display: flex;
@@ -31,7 +29,7 @@ export const Home = styled.button`
     @media screen and (max-width: 1000px){
       margin: 0 0 0 4rem;
       transform: scale(2);
-  } 
+    } 
   }
   &:hover{
     cursor: pointer;

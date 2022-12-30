@@ -1,29 +1,20 @@
 import { imagesType } from "../../types/types"
-import { Background, CloseButton, ImgBackground, MainImgWrapper, NavButton, NewMainImg, NewThumbImg, NewThumbRow, Wrapper } from "./photosModal-styles"
-import { useState } from "react"
+import { Background, CloseButton, NewNavButton, NewMainImg, Wrapper } from "./photosModal-styles"
+import ThumbnailRow from "../ThumbnailRow/thumbnailRow"
+import { MainImgWrapper } from "../carousel/carousel-styles"
 import {ReactComponent as NextIcon} from "../../assets/images/icon-next.svg"
 import{ReactComponent as PrevIcon}  from "../../assets/images/icon-previous.svg"
 import{ReactComponent as CloseIcon}  from "../../assets/images/icon-close.svg"
 
 type Props = {
   images: imagesType[],
-  setDisplayPhotos: React.Dispatch<React.SetStateAction<Boolean>>
+  setDisplayPhotos: React.Dispatch<React.SetStateAction<Boolean>>,
+  mainImgIndex: number,
+  setMainImgIndex: React.Dispatch<React.SetStateAction<number>>,
+  handleNavButton: (index: number, images: imagesType[]) => void
 }
 
-const PhotosModal = ({images, setDisplayPhotos}: Props) => {
-  const [mainImgIndex, setMainImgIndex] = useState(0)
-
-  const handleNavButton = (index: number)=>{
-    if((mainImgIndex+index)<0) {
-      setMainImgIndex(images.length-1)
-      return
-    }
-    if ((mainImgIndex+index)>(images.length-1)) {
-      setMainImgIndex(0)
-      return
-    }
-    setMainImgIndex(mainImgIndex+index)
-  }
+const PhotosModal = ({images, setDisplayPhotos, mainImgIndex, setMainImgIndex, handleNavButton}: Props) => {
 
   return (
     <Background>
@@ -31,24 +22,12 @@ const PhotosModal = ({images, setDisplayPhotos}: Props) => {
       <Wrapper>
         <CloseButton onClick={()=>setDisplayPhotos(false)}> <CloseIcon className="svg"/> </CloseButton>
         <MainImgWrapper>
-          <NavButton onClick={()=>handleNavButton(-1)}> <PrevIcon className="side"/> </NavButton>
+          <NewNavButton onClick={()=>handleNavButton(-1, images)}> <PrevIcon className="side"/> </NewNavButton>
           <NewMainImg src={images[mainImgIndex].img} alt={images[mainImgIndex].alt} />
-          <NavButton onClick={()=>handleNavButton(1)}> <NextIcon className="side"/> </NavButton>
+          <NewNavButton onClick={()=>handleNavButton(1, images)}> <NextIcon className="side"/> </NewNavButton>
         </MainImgWrapper>
 
-        <NewThumbRow>
-          {
-            images.map( (item, index)=> {
-              return(
-                <ImgBackground key={index}>
-                  <NewThumbImg src={item.img} alt={item.alt} key={index} 
-                    className={(images[mainImgIndex]===item? 'selected' : '')} 
-                    onClick={()=>setMainImgIndex(index)}/>
-                </ImgBackground>
-              )
-            })
-          }
-        </NewThumbRow>
+        <ThumbnailRow images={images} mainImgIndex={mainImgIndex} setMainImgIndex={setMainImgIndex}/>
 
       </Wrapper>
     </Background>

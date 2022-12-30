@@ -13,14 +13,12 @@ const Cart = () => {
   }
 
   return (
-    <>
       <Wrapper >
         <Title>Cart</Title>
         {
-          (cart?.length === 0) ?
-            <>
-              <EmptyCart>Your carty is empty.</EmptyCart>
-            </> :
+          (cart?.length === 0)? 
+            <EmptyCart>Your carty is empty.</EmptyCart>
+            :
             <>
               <ProductBox>
                 {
@@ -45,7 +43,6 @@ const Cart = () => {
             </>
         }
       </Wrapper>
-    </>
   )
 }
 
