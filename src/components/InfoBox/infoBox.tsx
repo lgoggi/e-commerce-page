@@ -24,11 +24,9 @@ const InfoBox = ({product}: Props) => {
     if(cart){
       let newCart = [...cart, {item: product, quant: quant}]
       setCart(newCart)
-      console.log(cart)
     } else {
       let newCart = [ {item: product, quant: quant} ]
       setCart(newCart)
-      console.log(cart)
     }
   }
   
