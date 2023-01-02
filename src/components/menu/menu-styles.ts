@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   z-index: 99;
   overflow: hidden;
