@@ -70,7 +70,7 @@ export const Nav = styled.button`
   border: none;
   color: #606060;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   height: 100%;
   margin: 1rem;
   width: fit-content;

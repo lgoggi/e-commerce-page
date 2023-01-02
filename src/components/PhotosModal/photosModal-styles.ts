@@ -7,7 +7,7 @@ export const Background = styled.div`
   height: 100vh;
   left: 0;
   place-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;

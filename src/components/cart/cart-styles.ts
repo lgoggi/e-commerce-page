@@ -15,22 +15,24 @@ export const Wrapper = styled.div`
   width: 30rem;
   z-index: 3;
   @media screen and (max-width: 720px) {
-    height: 35rem;
+    height: 30vh;
     right: 9vw;
     top: 12vh;
     width: 85vw;
   }
 `
 export const Title = styled.div`
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
   font-size: 1.5rem;
   font-weight: 700;
   height: 3rem;
   margin: 2rem 1.5rem;
   width: 90%;
+  @media screen and (max-width: 720px){
+    margin: 1rem 0.5rem;
+  }
 `
 export const ProductBox = styled.div`
-  border-bottom: 1px solid grey;
   height: 20rem;
   overflow-x:hidden;
   overflow-y: auto;

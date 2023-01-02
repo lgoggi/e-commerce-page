@@ -18,6 +18,8 @@ export const Brand = styled.div`
   margin: 3rem 0 1.5rem;
   @media screen and (max-width: 720px){
     width: 90vw;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1.5rem;
   }
 `
 export const Name = styled.div`
@@ -31,11 +33,13 @@ export const Name = styled.div`
   }
   @media screen and (max-width: 720px){
     width: 90vw;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 `
 export const Description = styled.div`
   color: #606060;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
   width: 25vw;
@@ -45,6 +49,8 @@ export const Description = styled.div`
   }
   @media screen and (max-width: 720px){
     width: 90vw;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 `
 export const PriceRow = styled.div`
@@ -55,13 +61,18 @@ export const PriceRow = styled.div`
   margin-bottom: 1rem;
   width: 15rem;
   @media screen and (max-width: 720px){
-    width: 90vw;
+    justify-content: space-between;
+    width: 88vw;
+    margin-bottom: 0;
   }
 `
 export const Price = styled.div`
   color: #252525;
   font-size: 2.5rem;
   font-weight: 700;
+  @media screen and (max-width: 720px){
+    font-size: 1.2rem;
+  }
 `
 export const OldPrice=styled.div`
   color:  #606060;
@@ -72,6 +83,7 @@ export const OldPrice=styled.div`
   @media screen and (max-width: 720px){
     margin: 0 0 0 auto;
     width: fit-content;
+
   }
 `
 export const Discount = styled.div`
@@ -89,7 +101,7 @@ export const BuyingRow = styled.div`
   flex-direction: row;
   margin: 2.5rem 0 1rem;
   @media screen and (max-width: 720px){
-    margin: 2.5rem 0 1rem 0;
+    margin: 1.5rem 0 0;
     flex-direction: column;
   }
 `
@@ -105,7 +117,6 @@ export const QuantBox = styled.div`
   align-items: center;
   width: 12rem;
   @media screen and (max-width: 720px){
-    height: 6rem;
     width: 90vw;
   }
 `
@@ -132,7 +143,6 @@ export const BuyButton = styled.button`
   width: 20rem;
   @media screen and (max-width: 720px){
     margin: 2rem 0;
-    height: 6rem;
     width: 90vw;
   }
 `

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display:flex;
   flex-direction: column;
   justify-items: center;
-  width: 35vw;
+  width: 30vw;
   @media screen and (max-width: 1440px){
     width: 50vw;
   } 
@@ -17,12 +17,15 @@ export const MainImgWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
 `
 export const MainImg=styled.img`
   border: 2px solid transparent;
   border-radius: 12px;
   cursor: pointer;
-  width: 35vw;
+  width: 30vw;
   :hover{
     border: 2px solid hsl(26, 100%, 55%);
   }
@@ -34,7 +37,7 @@ export const MainImg=styled.img`
     height: 30vh;
     object-fit: cover;
     object-position: 50% 50%;
-    width: 100vw;
+    width: stretch;
     :hover{
       border: none;
     }
@@ -47,14 +50,15 @@ export const NavButton = styled.button`
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  height: 3rem;
+  height: 2.5rem;
   justify-content: center;
-  margin: 0 -17.5vw;
-  width: 4rem;
+  margin: 0 -12.5vw;
+  width: 2.5rem;
   z-index: 2;
   .svg{
+    transform: scale(0.9);
     stroke: black;
-    stroke-width: 5px;
+    stroke-width: 2px;
   }  
   @media screen and (min-width: 720px){
     display: none;
