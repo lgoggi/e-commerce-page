@@ -46,8 +46,7 @@ export const Home = styled.button`
   }
 `
 export const MenuButton = styled.button`
-border: 1px solid green;
-  background-color: none;
+  background-color: white;
   border: none;
   cursor: pointer;
   display: none;
