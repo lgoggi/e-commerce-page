@@ -2,7 +2,7 @@ import avatar from "../../assets/images/image-avatar.png"
 import {ReactComponent as Icon} from "../../assets/images/icon-cart.svg";
 import{ReactComponent as Logo}  from "../../assets/images/logo.svg"
 import{ReactComponent as MenuIcon}  from "../../assets/images/icon-menu.svg"
-import { Wrapper, Home, Nav, Cart, Avatar, MenuButton } from "./header-styles"
+import { Wrapper, Home, Nav, Cart, Avatar, MenuButton, Quant } from "./header-styles"
 import { useContext } from "react";
 import { CartContext } from "../../providers/CartProvider";
 
@@ -26,7 +26,7 @@ const Header = ({displayCart, setDisplayCart, displayMenu, setDisplayMenu }: Pro
       <Nav>About</Nav>
       <Nav>Contact</Nav>
       <Cart onClick={()=>setDisplayCart(!displayCart)}> 
-        <Icon fill='#69707D' transform='scale(1.5)'/>
+        <Icon fill='#69707D' className="svg" /> {(cart?.length===0 || !cart)? '' : <Quant>{cart?.length}</Quant>}
       </Cart>
       <Avatar>
         <img src={avatar} alt="profile"/>

@@ -19,8 +19,10 @@ export const MainImgWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   overflow: hidden;
-  width: stretch;
-  
+  width: fit-content;
+  @media screen and (max-width: 720px) {
+    width: 100vw;
+  }
 `
 export const MainImg=styled.img`
   border: 2px solid transparent;

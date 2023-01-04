@@ -57,7 +57,7 @@ export const NewNavButton = styled(NavButton)`
   width: 4rem;
   .side{
     stroke: black;
-    stroke-width: 4px;
+    stroke-width: 3px;
   }
   :hover{
     .side{

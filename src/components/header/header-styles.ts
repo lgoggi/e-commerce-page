@@ -85,15 +85,29 @@ export const Cart = styled.button`
   background-color: white;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 3rem;
   margin: 0 2.5rem 0 auto;
-  width: 3rem;
+  svg{
+    transform: scale(1.5);
+    align-self: center;
+  }
   &:hover{
     transform: scale(1.25);
   }
   @media screen and (max-width: 720px){
     margin: 0;
   }
+`
+export const Quant = styled.div`
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 25px;
+  color: white;
+  align-self: flex-start;
+  height: 1rem;
+  width: 1.5rem;
 `
 export const Avatar = styled.div`
   border: 3px solid transparent;
