@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display:flex;
   flex-direction: column;
   justify-items: center;
-  width: 30vw;
+  width: 25vw;
   @media screen and (max-width: 1440px){
     width: 50vw;
   } 
@@ -18,14 +18,15 @@ export const MainImgWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100vw;
   overflow: hidden;
+  width: stretch;
+  
 `
 export const MainImg=styled.img`
   border: 2px solid transparent;
   border-radius: 12px;
   cursor: pointer;
-  width: 30vw;
+  width:  25vw;
   :hover{
     border: 2px solid hsl(26, 100%, 55%);
   }

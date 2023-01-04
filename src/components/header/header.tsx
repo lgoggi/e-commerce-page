@@ -3,6 +3,8 @@ import {ReactComponent as Icon} from "../../assets/images/icon-cart.svg";
 import{ReactComponent as Logo}  from "../../assets/images/logo.svg"
 import{ReactComponent as MenuIcon}  from "../../assets/images/icon-menu.svg"
 import { Wrapper, Home, Nav, Cart, Avatar, MenuButton } from "./header-styles"
+import { useContext } from "react";
+import { CartContext } from "../../providers/CartProvider";
 
 type Props = {
   displayCart: Boolean, 
@@ -12,7 +14,8 @@ type Props = {
 }
 
 const Header = ({displayCart, setDisplayCart, displayMenu, setDisplayMenu }: Props) => { 
-
+  const { cart } = useContext(CartContext)
+  
   return (
     <Wrapper>
       <MenuButton onClick={()=> setDisplayMenu(!displayMenu)}> <MenuIcon className="svg"/> </MenuButton>

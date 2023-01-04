@@ -70,7 +70,7 @@ export const Nav = styled.button`
   border: none;
   color: #606060;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   height: 100%;
   margin: 1rem;
   width: fit-content;
@@ -82,22 +82,21 @@ export const Nav = styled.button`
   } 
 `
 export const Cart = styled.button`
-  background-size: cover;
   background-color: white;
   border: none;
-  height: 2rem;
+  cursor: pointer;
+  height: 3rem;
   margin: 0 2.5rem 0 auto;
-  width: 2.2rem;
+  width: 3rem;
   &:hover{
-    cursor: pointer;
-    height: 2.3rem;
-    width: 2.5rem;
+    transform: scale(1.25);
   }
   @media screen and (max-width: 720px){
     margin: 0;
   }
 `
 export const Avatar = styled.div`
+  border: 3px solid transparent;
   border-radius: 50%;
   height: 7.3vh;  
   margin: 0 2rem 0 0;

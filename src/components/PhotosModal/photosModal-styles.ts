@@ -35,7 +35,7 @@ export const CloseButton = styled.button`
   justify-content: center;
   .svg{
     fill: #69707D;
-    transform: scale(3);
+    transform: scale(2);
     :hover{
       fill: hsl(26, 100%, 55%);
     }
@@ -52,10 +52,12 @@ export const NewMainImg = styled(MainImg)`
   }
 `
 export const NewNavButton = styled(NavButton)`
+  height: 4rem;
   margin: 0;
+  width: 4rem;
   .side{
     stroke: black;
-    stroke-width: 3px;
+    stroke-width: 4px;
   }
   :hover{
     .side{

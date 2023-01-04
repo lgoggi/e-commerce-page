@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,10 +25,10 @@ export const Brand = styled.div`
 `
 export const Name = styled.div`
   color: #252525;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 3rem;
-  width: 25vw;
+  margin-bottom: 2rem;
+  width: 30vw;
   @media screen and (max-width: 1440px){
     width: 40vw;
   }
@@ -42,7 +43,7 @@ export const Description = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
-  width: 25vw;
+  width: 30vw;
   overflow-wrap: break-word;
   @media screen and (max-width: 1440px){
     width: 40vw;
@@ -115,7 +116,7 @@ export const QuantBox = styled.div`
   height: 4rem;
   justify-content: space-between;
   align-items: center;
-  width: 12rem;
+  width: 15rem;
   @media screen and (max-width: 720px){
     width: 90vw;
   }
